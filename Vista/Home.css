@@ -1,0 +1,236 @@
+nav {
+  background-color: #33b444;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav li {
+  flex: 1;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  color: #000000;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	border: none;
+	outline: none;
+	color: inherit;
+	list-style: none;
+	font-family: "Poppins";
+}
+body {
+	/* ESTAS MEDIDAS SON OBLIGATORIAS PARA QUE EL SITIO MIDA COMO MINIMO EL ALTO DE LA PANTALLA */
+	min-height: 100vh;
+	height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+
+/* ESTILO DE TODOS LOS BOTONES */
+.btn {
+	display: inline-block;
+	padding: 0.6em 1.7em;
+	border-radius: 0.3em;
+	font-weight: 800;
+	text-transform: uppercase;
+	letter-spacing: 0.09em;
+}
+
+/* HEADER CON FLEX */
+header {
+	/* EL HEADER QUEDA ARRIBA */
+	position: sticky;
+	top: 0;
+	background: white;
+	z-index: 1;
+	/* SEPARAR LOGO Y MENU */
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	/* ESTILO */
+	padding: 1.5em 2em;
+	box-shadow: 0 0 20px 0 rgb(238, 234, 234);
+}
+
+/* NAV CON FLEX */
+nav {
+	display: flex;
+	/* EN VEZ DE DAR PADDING A LOS BOTONES, AL SER SOLO PALABRAS USAMOS "GAP" QUE AGREGA ESPACIO ENTRE LOS ITEMS, DE ESTA FORMA NO HAY QUE DARLE UN ANCHO AL NAV/UL NI PADDING/MARGIN A LOS ENLACES */
+	gap: 1em;
+}
+
+/* HERO CENTRADO CON GRID */
+.hero {
+	background: url("https://motor.elpais.com/wp-content/uploads/2022/04/Hyundai-Tucson-2021-1600-0b.jpg")
+		no-repeat center/cover;
+	height: 80vh;
+	display: grid;
+	place-content: center; 
+  
+}
+
+/* ESTILO DE LA CAJA DE TEXTO */
+.hero-txt {
+	text-align: center;
+	max-width: 50vw;
+  color: aliceblue;
+}
+
+.hero-txt h1 > span {
+	margin-top: 0.7em;
+	display: block; /* FILA NUEVA */
+	/* REDUCIR TIPOGRAFIA Y NEGRITA */
+	font-size: 0.7em;
+	font-weight: 400;
+	line-height: 1.8em;
+}
+
+/* COLOR DEL BOTÓN DEL HERO */
+.hero .btn {
+	margin-top: 1.3em;
+	background: rgb(145, 226, 125);
+}
+
+.productos {
+	padding: 3em;
+}
+
+.title-c {
+	text-align: center;
+	margin-bottom: 1.5em;
+	text-decoration: underline #84d18e 0.2em;
+	/* SEPARA EL SUBRAYADO DEL TEXTO */
+	text-underline-offset: 0.3em;
+}
+
+/* CONTENEDOR DE TARJETAS RESPONSIVE CON GRID */
+.contenedor {
+	display: grid;
+	/* 	-------------AL USAR GRID, LA ULTIMA FILA NO QUEDA CENTRADA-------------
+	GRID-TEMPLATE-COLUMNS: Esta propiedad de GRID crea las columnas de la grilla.
+	-REPEAT-> (cantidad de columnas, misma medida) -> repeat(2,200px) crea 2 columnas/filas de 200px.
+	-AUTO-FIT-> GRID CREA TANTAS COLUMNAS COMO ITEMS.
+	--> AUTO-FIT PUEDE CAMBIARSE POR AUTO-FILL QUE SIGUE CREANDO COLUMNAS AUNQUE YA USO TODOS LOS ITEMS.
+	-MINMAX-> CADA COLUMNA TIENE COMO MÍNIMO XXX y COMO MÁXIMO UNA FRACCIÓN*/
+
+	/* 	repeat (numero de veces que repite, medida) */
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 2em;
+}
+
+/* TARJETAS CON FLEX*/
+.card {
+	display: flex;
+	flex-flow: column;
+	border-radius: 0.3em;
+	overflow: hidden; /*PARA QUE LA FOTO TENGA EL BORDER-RADIUS ARRIBA*/
+	box-shadow: 0 10px 25px -10px black;
+
+	transition: 300ms ease-in-out; /* TRANSICIÓN PARA EL EFECTO DEL :HOVER */
+	/* 	 */
+}
+
+/* TARJETA CRECE DE TAMAÑO CON HOVER */
+.card:hover {
+	transform: scale(1.05);
+	box-shadow: 0 15px 35px -10px black;
+}
+
+.card-img {
+	width: 100%;
+	flex-basis: 200px; /* FLEX SE USA PARA DARLE UN ALTO MINIMO DE 200PX A LA IMAGEN */
+}
+
+/* ID PARA DAR LAS IMAGENES DE CADA TARJETA */
+#producto-01 {
+	background: url("https://www.megautos.com/wp-content/uploads/2019/08/toyota-yaris-2020-sedan-delantera.jpg")
+		no-repeat 50% 20% / cover;
+}
+#producto-02 {
+	background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtYMUery2t0eFZlevSss4U92MpvKLynAl-ng&usqp=CAU")
+		no-repeat 50% 60% / cover;
+}
+
+#producto-03 {
+	background: url("https://www.koreautoscr.com/wp-content/uploads/Kia-Sportage-2017-2.0-MT-SUV-PL-KYK268-1.jpg")
+		no-repeat 50% 60% / cover;
+}
+#producto-04 {
+	background: url("https://s7g10.scene7.com/is/image/hyundaiautoever/Resize_5x4_2")
+		no-repeat 50% 60% / cover;
+}
+
+
+.card-txt {
+	/* FLEX PARA QUE EL TITULO SIEMPRE ESTE ARRIBA Y EL BOTON ABAJO */
+	display: flex;
+	flex-flow: column;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+	padding: 1.5em;
+	text-align: center;
+}
+
+.card-txt .btn {
+	font-size: 0.8em;
+	background: linear-gradient(45deg, #f1f1f1 0%, #e4e1e4 47%, #96dda2 95%);
+}
+
+/* FOOTER CON FLEX */
+footer {
+	display: flex;
+	flex-flow: row;
+	justify-content: space-between;
+	align-items: baseline;
+	/* ESTILO */
+	padding: 0.5em 2em;
+	background: url("https://images.unsplash.com/photo-1525982479023-9093afb36871?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80")
+		no-repeat bottom/cover;
+}
+
+
+footer .redes {
+	text-align: right;
+}
+
+footer .redes h3 {
+	margin-bottom: 0.7vh;
+}
+/* UL CON FLEX */
+footer .redes ul {
+	display: flex;
+	flex-flow: row;
+	justify-content: flex-end;
+	gap: 2em;
+}
+
+@media only screen and (max-width: 500px) {
+	footer {
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
+
+		footer .redes ul {
+		display: flex;
+		justify-content: center;
+	}
+	
+}
+

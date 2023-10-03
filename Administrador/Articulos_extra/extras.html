@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrales en todo el pais</title>
+    <link rel="stylesheet" href="http://localhost/DesarrolloWeb_proyecto/Vista/extras.css">
+    <script src="Funcion.js"></script>
+</head>
+<body>
+    <h1>Mantenimiento de Articulos extras</h1>
+    <!-- Formulario para agregar una central -->
+    <h2>Agregar un nuevo articulo</h2>
+    <form id="form-agregar" onsubmit="return false;" method="POST">
+            <tr>
+                <td>
+                    <input type="text" name="articulos" id="articulos" placeholder="articulo">
+                </td>
+                <td>
+                    <input type="number" name="cantidad" id="cantidad" placeholder="Cantidad de articulo">
+                </td>
+                <td>
+                    <input type="number" name="precio" id="precio" placeholder="precio del articulo">
+                </td>
+                <td>
+                    <button type="submit"  onclick="agregarNuevo()">agregar</button>
+                </td>
+            </tr>
+    </form>
+    
+      <div id="lista">
+        <table id="tabla" class="tabla-custom">
+            <tr> 
+                <th>Articulos</th>
+                <th>Cantidad de articulos</th>
+                <th>Acciones</tr>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <a href="http://localhost/DesarrolloWeb_proyecto/Administrador/Configuracion.html">Regresar</a> 
+    </div>
+
+</body>
+</html>

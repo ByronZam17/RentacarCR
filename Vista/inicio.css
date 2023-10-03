@@ -1,0 +1,432 @@
+:root{
+    --color-primary : #0E8F13;
+    --color-primary-dark: #107a14;
+    --color-secondary:#3F22AB;
+    --color-ternary:#F3E619;
+   
+    --color-white:#f6f6f9;
+    --color-light: #DEDEE0;
+    --color-medium: #79797A;
+    --color-black: #0D0D0F;
+}
+
+
+
+
+body{
+    background: var(--color-white);
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    color: var(--color-black);
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+header{
+    height: 100px;
+    background: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#logo{
+    font-size: 45px;
+    font-weight: 600;
+}
+header .logo-white{
+    color: var(--color-white);
+    margin:-10px;
+    padding: 0;
+}
+header .logo-yellow{
+    font-size: 47px;
+    color: var(--color-primary);
+    margin: 0px;
+    padding: 0;
+}
+
+li{
+    display: inline;
+    text-decoration: none;
+    margin:10px;
+}
+header a{
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--color-light);
+}
+header a:hover{
+   
+    color:var(--color-primary);
+
+}
+
+
+
+#hero{  
+    width: 100%;
+    height: 600px;
+    background:var(--color-black);
+}
+#hero-img{
+    bottom: 10%;
+    width: 100%;
+    height: 100%;
+    background: url( https://image.freepik.com/vector-gratis/coche-sedan-blanco-vector-fondo-negro_53876-67369.jpg) no-repeat right;
+    background-size: cover;
+}
+
+#hero-img h1{
+    text-align: center;
+    margin: 0 0 50px 2vh;
+    width: 30vw;
+    font-size: 4vw;
+    padding-top: 60px;
+    color: var(--color-light);
+}
+#hero-img a{
+    margin: 30px 0 0 4vh;
+    font-size: 22px;
+    text-decoration: none;
+    padding: 13px 50px 18px;
+    border-radius: 35px;
+    
+}
+
+
+
+#cards-container{
+
+    width: 90%;
+    height: 400px;
+    margin: 50px auto;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;
+}
+.card{
+   
+    width:350px ;
+    min-width: 30%;
+    text-align: center;
+    background:white;
+    border-radius: 3px;
+}
+.card h3{
+    font-size:1.5em ;
+}
+.card p{
+    font-size:1.1em ;
+}
+
+.card-img{
+    width: 100%;
+    height: 60%;
+}
+
+.card-1{
+    background: url(https://s1.1zoom.me/b5353/72/Suzuki_Cars_Escudo_S_Limited_2020_Blue_Metallic_596906_1366x768.jpg) no-repeat right;
+    background-size: contain;
+}
+.card-2{
+    background: url(https://autosalquileme.es/wp-content/uploads/CarRentalGallery/seat-mii.png) no-repeat right;
+    background-size: contain;
+}
+.card-3{
+    background: url(https://s1.1zoom.me/big3/660/413489-svetik.jpg) no-repeat right;
+    background-size: contain;
+}
+
+#pricing-component{
+    height: fit-content ;
+    background: var(--color-black);
+    color: var(--color-light);
+    margin: 25px auto;
+    padding:0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+h2{
+    margin: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+.pricing-module{
+    width: 50%;
+    margin:10px auto;
+}
+.btn{
+    margin: 10px auto;
+    font-size: 26px;
+    font-family: 'open sans', sans-serif;
+    font-weight: 600;
+    padding: 5px 50px 6px;
+    background: var(--color-primary);
+    color: var(--color-light);
+    border: none;
+    border-radius: 16px;
+}
+.btn:hover{
+   background:var(--color-primary-dark);
+   transition: 300ms;
+}
+
+label{
+    display:block;
+    font-size: 22px;
+    width: fit-content;
+    margin: auto;  
+}
+input{
+    width:50px ;
+}
+input,select{    
+    margin-top: 10px;
+    font-size: 1em;
+    text-align: center;
+    line-height: 1.5;
+    color: var(--color-white);
+    
+    height: 1.6em;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--color-primary-dark);
+    outline: none;
+}
+option{
+    background: var(--color-black);
+    line-height: 1.3em;    
+}
+
+
+#show-price{
+    font-size: 40px;
+    font-weight: 800;
+    text-align: center;
+    display: block;
+    color: var(--color-primary-dark);
+    margin:20px auto;
+}
+
+
+
+.one{
+    
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+.two{
+    
+    grid-column: 3/5;
+    grid-row: 1/2;
+}
+.three{
+    
+    grid-column: 3/5;
+    grid-row: 2/4;
+}
+.four{
+    
+    grid-column: 1/3;
+    grid-row: 3/4;
+}
+.five{
+    
+    grid-column: 1/5;
+    grid-row: 4/5;
+}
+
+
+#faq{
+    max-width: 800px;
+    margin: 155px auto;
+    text-align: center;
+    display: flex;
+    flex-flow: column ;
+}
+
+.accordion {
+    display: block;
+    
+    background-color: var(--color-light);
+    width: 100%;
+    padding: 18px;
+    margin: auto;
+    text-align: left;
+
+    font-size: 22px;
+    color: var(--color-black);
+    cursor: pointer;
+    
+    border: none;
+    outline: none;
+    transition: 0.7s;
+  }
+  
+  
+  .active, .accordion:hover {
+    background-color: var(--color-medium);
+    
+  }
+  
+  .panel {
+    display: none;
+    overflow: hidden;
+    background-color: white;
+    padding: 10px 15px;
+    
+   
+
+  }
+  .panel p{
+    font-size: 20px;
+  }
+
+  footer{
+      max-width: 100%;
+      padding: 20px;
+      height: fit-content;
+      background: var(--color-medium);
+  }
+  footer p{
+      width: fit-content;
+      margin: auto;
+      color:var(--color-light)
+  }
+
+  @media (max-width:800px){
+    #her{
+        padding: 20px;
+    }
+    #hero-img h1{
+        text-align: center;
+        margin: 0 0 50px 2vh;
+        width: 60vw;
+        font-size: 5vw;
+        padding-top: 60px;
+        
+        color: var(--color-light);
+    }
+    .separador{
+        margin-bottom: 300px;
+        width: 20px;
+    }
+    #hero-img a{
+        bottom: 5%;
+        margin: 180px auto;
+        font-size: 4vw;
+        text-decoration: none;
+        padding: 13px 50px 18px;        
+    }
+    #cards-container{
+        width: 90%;
+        height: fit-content;
+        margin: 50px auto;
+        display: flex;
+        flex-flow: column;
+        align-content: space-evenly;
+    }
+
+    .card{
+        height:350px ;
+        
+        text-align: center;
+        margin: auto;
+    }
+
+    #pricing-component{
+        height: fit-content ;
+        max-width: 90vw;
+        background: var(--color-black);
+        color: var(--color-light);
+        margin: 25px auto;
+        padding:0 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #testimonial-container{
+        max-width: 900px;
+        height: fit-content;
+        margin: 25px 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    #faq{
+        max-width: 100%;
+  }
+}
+@media (max-width: 430px){
+    nav{
+        display: none;
+    }
+   
+    #hero-img h1{
+        text-align: center;
+        margin: 0 0 50px 2vh;
+        width: 60vw;
+        font-size: 30px;
+        padding-top: 60px;
+        color: var(--color-light);
+    }
+    .separador{
+        margin-bottom: 300px;
+        width: 20px;
+    }
+    #hero-img a{
+        padding: 5px 20px 6px;
+        font-size: 20px;
+        text-decoration: none;
+        margin:auto; 
+    }
+    #cards-container{
+        width: 250px;
+        height: fit-content;
+        margin: 50px 0;
+        display: flex;
+        flex-flow: column;
+        align-content: space-evenly;
+    }
+
+    .card{
+        height:250px ;
+        text-align: center;
+        margin:20px 0;
+    }
+    .card h3{
+        font-size:1.5em ;
+    }
+    .card p{
+        font-size:1.1em ;
+    }
+    
+    .card-img{
+        width: 80%;
+        height: 60%;
+    }
+    
+            
+    #faq{
+        max-width: 100%;
+        margin-top: 50px;
+  }
+}
+
+
+body {
+    background: #e2e46e; 
+    background: rgb(228, 240, 127);
+    background: linear-gradient(90deg, rgb(210, 238, 133) 0%, rrgb(210, 218, 206)50%);
+    font-family: "Chrome 1", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    
+
+       
+}
+

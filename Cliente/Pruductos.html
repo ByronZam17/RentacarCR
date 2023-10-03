@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <link rel="stylesheet" href="http://localhost/DesarrolloWeb_proyecto/Vista/Productos.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+    <meta name= "viewport" content="width=device-width, initial- scale=1.0">
+    <script src="funciones.js"></script>
+    <title>RentacarCR</title>
+</head>
+<Body>
+<!-- tabla de productos para que se muestren a los clientes!-->
+    <div><center>
+    <br><br>
+    <label for="carType">Seleccione el tipo de vehículo:</label>
+    <select id="carType" name="carType">
+        <option value="todoterreno">Todoterreno</option>
+        <option value="familiar">Familiar</option>
+        <option value="deportivo">Deportivo</option>
+        <option value="estandar">Estándar</option>
+    </select>
+    </div></center>
+    <div id="lista">
+        <table id="tabla_productos" class="tabla-custom">
+            <tr>
+                <th>Placa</th>
+                <th>Marca</th>    
+                <th>Año</th> 
+                <th>Tipo</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Acciones</tr>
+            </tr>
+        </table>
+    </div>
+</Body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mantenimiento de Vehículos</title>
+    <link rel="stylesheet" href="http://localhost/DesarrolloWeb_proyecto/Vista/Productos.css">
+    <script src="Funcion.js"></script>
+</head>
+<body>
+    <h1>Mantenimiento de Vehículos</h1>
+    <!-- Formulario para agregar un vehículo -->
+    <h2>Agregar Vehículo</h2>
+    <form id="form-agregar" onsubmit="return false;" method="POST">
+        <tr>
+      
+        <input type="text"  name="placa" id="placa" placeholder="Placa" >--
+        
+        <input type="text"  name="marca" id="Marca" placeholder="Marca" >--
+      
+        <input type="number"  name="anio" id="anio" placeholder="anio" min="1900" max="?php echo date('Y'); ?" >--
+      
+        <select name="tipo" id="tipo">
+            <option value="todorerreno">todorerreno</option>
+            <option value="familiar">familiar</option>
+            <option value="deportivo">deportivo</option>
+            <option value="estandar">estandar</option>
+        </select> --
+        <input type="number"  name="precio" id="precio" placeholder="Precio" >
+        <br>
+        <br>
+        <input type="file" name="imagen" id="imagen" >
+        </tr>
+        <br>
+        <br>
+        <div> 
+        <tr>           
+        <tr>
+        <button type="submit"  onclick="agregarNuevo()">agregar</button>
+      </form>
+    
+      <div id="lista">
+        <table id="tabla" class="tabla-custom">
+            <tr>
+                <th>ID</th>
+                <th>Placa</th>
+                <th>Marca</th>    
+                <th>Año</th> 
+                <th>Tipo</th>
+                <th>Precio</th>
+                <th>Imagen</th>
+                <th>Acciones</tr>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <a href="http://localhost/DesarrolloWeb_proyecto/Administrador/Configuracion.html">Regresar</a> 
+    </div>
+
+</body>
+</html>

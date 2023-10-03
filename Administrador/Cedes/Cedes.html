@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centrales en todo el pais</title>
+    <link rel="stylesheet" href="http://localhost/DesarrolloWeb_proyecto/Vista/Cedes.css">
+    <script src="Funcion.js"></script>
+</head>
+<body>
+    <h1>Mantenimiento de Centrales</h1>
+    <!-- Formulario para agregar una central -->
+    <h2>Agregar una nueva central</h2>
+    <form id="form-agregar" onsubmit="agregarNuevo(); return false;" method="POST">
+        <table>
+            <tr>
+                <td>
+                    <select name="provincia" id="provincia">
+                        <option value="San Jose">San Jose</option>
+                        <option value="Cartago">Cartago</option>
+                        <option value="Heredia">Heredia</option>
+                        <option value="Alajuela">Alajuela</option>
+                        <option value="Limon">Limon</option>
+                        <option value="Guanacaste">Guanacaste</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="number" name="personal" id="personal" placeholder="personal">
+                </td>
+                <td>
+                    <select name="disposicion" id="disposicion">
+                        <option value="Abierta">Abierta</option>
+                        <option value="Mantenimiento">Mantenimiento</option>
+                    </select>
+                </td>
+                <td>
+                    <input type="text" name="direccion" id="direccion">
+                </td>
+                <td>
+                    <button type="submit">Agregar</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    
+      <div id="lista">
+        <table id="tabla" class="tabla-custom">
+            <tr> 
+                <th>Provincia</th>
+                <th>Cantidad de personal</th>
+                <th>Disponibilidad</th>
+                <th>Direccion</th>
+                <th>Acciones</tr>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <a href="http://localhost/DesarrolloWeb_proyecto/Administrador/Configuracion.html">Regresar</a> 
+    </div>
+
+</body>
+</html>

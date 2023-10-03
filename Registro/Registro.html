@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="http://localhost/DesarrolloWeb_proyecto/Vista/Registro.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Registro</title>
+    <script src="funcion.js"></script>
+</head>
+<body>
+    <div class="form">
+        <h1>Regístrese de forma segura!</h1>
+        <form id="registerForm" onsubmit="return verificar();">
+            <input type="text" name="usuario" id="usuario" placeholder="Su usuario" required>
+            <br>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <br>
+            <label>Tipo de usuario:</label>
+            <input type="radio" name="tipo" value= 0 checked> Cliente
+            <input type="radio" name="tipo" value= 1> Administrador
+            <br>
+            <br>
+            <button type="submit">Crear</button>
+        </form>
+    </div>
+</body>
+</html>
